@@ -137,5 +137,14 @@ public class Auction
             }
         }        return unsoldLots;
     }
+
+    /**
+     * Metodo para eliminar el lote con el numero de lote pasado por parametro
+     */
+    public Lot removeLot(int numeroDeLote){
+        Lot loteEliminado = getLot(numeroDeLote);
+        lots.remove(loteEliminado);
+        return loteEliminado;
+    }
 }
 
