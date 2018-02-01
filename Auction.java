@@ -118,5 +118,22 @@ public class Auction
             }
         }
     }
+
+    /**
+     * metodo para almacenar los lotes no vendidos en un arraylist nuevo y buscamos los lotes
+     * con puja maxima null
+     */
+    public ArrayList<Lot> getunsold()
+    {
+        ArrayList<Lot> unsoldLots = new ArrayList<Lot>();
+        if(0 < lots.size()){
+            for (Lot lotesDePujas : lots){
+                if(lotesDePujas.getHighestBid()== null)
+                {
+                    unsoldLots.add(new Lot(lotesDePujas.getNumber(),lotesDePujas.getDescription()));
+                }
+            }
+        }        return unsoldLots;
+    }
 }
 
